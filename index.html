@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <!-- Fonts and Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Tilt+Warp&display=swap" rel="stylesheet">
+  <!-- Main Stylesheet -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<style>
+  html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Tilt Warp', cursive;
+  font-size: 40px;
+  margin: 0;
+  color: white;
+}
+
+img {
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 5%;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='144' height='144' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(134)'%3E%3Crect width='100%25' height='100%25' fill='rgba(66, 153, 225,1)'/%3E%3Cpath d='m10 0v40h0.1v-40z' fill='rgba(247, 250, 252,0.5)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+  height: 100%;
+}
+
+.container {
+  max-width: 400px;
+  height: 400px;
+  padding: 0 20px;
+  /* outline: 1px solid red; */
+}
+
+#myWhyButton {
+  color: white;
+  font-size: 20px;
+  border: 1px solid white;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#myWhyText {
+  width: 100%;
+  margin: 10px 0 10px;
+  display: none;
+}
+
+.animate {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+</style>
+  
+<body>
+  <main>
+    <section class="container">
+        <h1>What is Your Why?</h1>
+        <p>When times get tough, when the road seems too long, look back on your why and keep trying.</p>
+        <button id="myWhyButton">See My Why</button>
+        <p id="myWhyText">I want to change my career through technology and financially support my family!</p>
+    </section>
+    <img src="https://bloomtech-public-assets.s3.amazonaws.com/path.png" alt="A path that goes into the unknown.">
+
+    </section>
+  </main>
+ 
+
+ 
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+<script>
+
+  const myWhyText = document.getElementById("myWhyText");
+  const myWhyButton = document.getElementById("myWhyButton");
+  
+  myWhyButton.addEventListener("click", () => {
+    myWhyText.classList.toggle("animate");
+    
+    if(myWhyText.classList.contains("animate")) {
+      myWhyText.style.display = "block";
+    }else {
+      myWhyText.style.display = "none";
+  }
+  });
+    
+</script>
+  
+  
+</html>
