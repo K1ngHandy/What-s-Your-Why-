@@ -1,14 +1,14 @@
 // JavaScript
 
-const myWhyText = document.getElementById("");
-const myWhyButton = document.getElementById("");
+const myWhyText = document.getElementById("myWhyText");
+const myWhyButton = document.getElementById("myWhyButton");
 
 myWhyButton.addEventListener("click", () => {
   myWhyText.classList.toggle("animate");
-  
-  if(myWhyText.classList.contains("animate")) {
+
+  if (myWhyText.classList.contains("animate")) {
     myWhyText.style.display = "block";
-  }else {
+  } else {
     myWhyText.style.display = "none";
-}
+  }
 });
